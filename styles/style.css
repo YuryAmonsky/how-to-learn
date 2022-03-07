@@ -14,18 +14,22 @@
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
-  position: relative; /*установил позиционирование родителя, чтобы дочерние элементы (logo, main-illustration, ) позиционировать абсолютно*/
-  display: flex; /*делаю header flex-контейнером для центрирования основного заголовка (header__title) по вертикали*/
+  /*установил позиционирование родителя, чтобы дочерние элементы (logo, main-illustration, ) позиционировать абсолютно*/
+  position: relative;
+  /*делаю header flex-контейнером для центрирования основного заголовка (header__title) по вертикали*/
+  display: flex;
   background-color: #f2f2f2;
 }
 
 .logo{
   width: 183px;
-  z-index: 2; /*логотип должен располагаться поверх других блоков*/
+  /*логотип должен располагаться поверх других блоков*/
+  z-index: 2;
 }
 
 .logo_place_header{
-  height: 32px; /*высота logo в header и footer разная, поэтому вынес ее в модификатор*/
+  /*высота logo в header и footer разная, поэтому вынес ее в модификатор*/
+  height: 32px;
   position: absolute;
   top: 30px;
   left: 64px;
@@ -40,8 +44,10 @@
 .header__title{
   width: 730px;
   margin-left: 64px;
-  align-self: center; /*центрирую flex-элемент заголовок по вертикали*/
-  z-index: 2; /*заголовок должен располагаться поверх других блоков*/  
+  /*центрирую flex-элемент заголовок по вертикали*/
+  align-self: center;
+  /*заголовок должен располагаться поверх других блоков*/
+  z-index: 2;
   /*Настройки шрифта*/
   font-weight: bold;
   font-size: 102px;
@@ -61,8 +67,10 @@
 }
 
 .header__link{
-  color: #2f80ed; /*задал ссылке цвет текста по брифу*/
-  text-decoration: none; /*убрал подчеркивание*/
+  /*задал ссылке цвет текста по брифу*/
+  color: #2f80ed;
+  /*убрал подчеркивание*/
+  text-decoration: none;
 }
 
 .header__square-pic{
@@ -71,7 +79,8 @@
   position: absolute;
   top: 64px;
   right: 0;
-  z-index: 0; /*фоновые картинки не должны перекрывать текст */
+  /*фоновые картинки не должны перекрывать текст */
+  z-index: 0;
   background-color: #2f80ed;
 }
 
@@ -81,7 +90,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 1; /*основная иллюстрация перекрывается текстом, но сама перекрывает синий квадрат*/
+  /*основная иллюстрация перекрывается текстом, но сама перекрывает синий квадрат*/
+  z-index: 1;
   background-image: url(../images/header-image.png);
   background-size: 765px 608px;
   background-repeat: no-repeat;
@@ -113,7 +123,7 @@
   width: 175px;
   margin: 0;
   /*Настройки шрифта*/
-  color:#2f80ed ;
+  color: #2f80ed;
   font-weight: normal;
   font-size: 18px;
   line-height: 1.2;
@@ -131,7 +141,7 @@
   margin: 0 0 30px 0;
   padding: 0;
   /*Настройки шрифта*/
-  color:#000000;
+  color: #000000;
   font-weight: normal;
   font-size: 24px;
   line-height: 34px;
@@ -264,7 +274,8 @@
   position:relative;
   z-index: 0;
   background-color:  #1f1f1f;
-  overflow: hidden; /*прячем выступающую за блок часть синего треугольника*/
+  /*прячем выступающую за блок часть синего треугольника*/
+  overflow: hidden;
 }
 
 /*Выншу отступы блока в модификатор*/
@@ -340,7 +351,7 @@
   justify-content: space-between;
 }
 
-.footer__column_content_copyright{  
+.footer__column_content_copyright{
   flex-basis: 711px;
   display: flex;
   flex-direction: column;
@@ -378,7 +389,8 @@
   width: 16px;
   height: 16px;
   margin-right: 10px;
-  display: inline-block; /*Позиционирование иконок соцсетей на одной линии с ссылками*/
+  /*Позиционирование иконок соцсетей на одной линии с ссылками*/
+  display: inline-block;
 }
 
 .footer__social-icon_name_facebook{
@@ -389,5 +401,5 @@
 }
 
 .footer__social-icon_name_instagram{
-  background-image: url(../images/instagram_color_white.svg);  
+  background-image: url(../images/instagram_color_white.svg);
 }
