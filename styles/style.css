@@ -6,7 +6,7 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;  
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .header {
@@ -17,19 +17,21 @@
   position: relative; /*установил позиционирование родителя, чтобы дочерние элементы (logo, main-illustration, ) позиционировать абсолютно*/
   display: flex; /*делаю header flex-контейнером для центрирования основного заголовка (header__title) по вертикали*/
   background-color: #f2f2f2;
-  
 }
+
 .logo{
   width: 183px;
-  z-index: 2;   /*логотип должен располагаться поверх других блоков*/
+  z-index: 2; /*логотип должен располагаться поверх других блоков*/
 }
-.logo_place_header{   
-  height: 32px;     /*высота logo в header и footer разная, поэтому вынес ее в модификатор*/
+
+.logo_place_header{
+  height: 32px; /*высота logo в header и footer разная, поэтому вынес ее в модификатор*/
   position: absolute;
   top: 30px;
   left: 64px;
   background-image: url(../images/logo_place_header.svg);
 }
+
 .logo_place_footer{
   height: 35px;
   background-image: url(../images/logo_place_footer.svg);
@@ -39,11 +41,11 @@
   width: 730px;
   margin-left: 64px;
   align-self: center; /*центрирую flex-элемент заголовок по вертикали*/
-  z-index: 2;         /*заголовок должен располагаться поверх других блоков*/  
+  z-index: 2; /*заголовок должен располагаться поверх других блоков*/  
   /*Настройки шрифта*/
-  font-weight: bold;  
-  font-size: 102px;  
-  line-height: 96px;  
+  font-weight: bold;
+  font-size: 102px;
+  line-height: 96px;
 }
 
 .header__subtitle{
@@ -54,7 +56,7 @@
   z-index: 2;
   /*Настройки шрифта*/
   font-weight: normal;
-  font-size: 18px;  
+  font-size: 18px;
   line-height: 25px;
 }
 
@@ -62,9 +64,10 @@
   color: #2f80ed; /*задал ссылке цвет текста по брифу*/
   text-decoration: none; /*убрал подчеркивание*/
 }
+
 .header__square-pic{
   height: 568px;
-  width: 568px;  
+  width: 568px;
   position: absolute;
   top: 64px;
   right: 0;
@@ -94,7 +97,7 @@
 поэтому для отступов создал модификатор*/
 .description_indent_top{
   /*по брифу у секции description нет внешних отступов, есть отступ внутри сверху*/
-  margin:0;            
+  margin:0;
   padding: 100px 0 0;
 }
 
@@ -112,7 +115,7 @@
   /*Настройки шрифта*/
   color:#2f80ed ;
   font-weight: normal;
-  font-size: 18px;  
+  font-size: 18px;
   line-height: 1.2;
 }
 /*правая колонка*/
@@ -123,14 +126,15 @@
   margin: 0;
   padding: 0;
 }
+
 .two-columns__paragraph{
   margin: 0 0 30px 0;
   padding: 0;
   /*Настройки шрифта*/
   color:#000000;
   font-weight: normal;
-  font-size: 24px;  
-  line-height: 34px;    
+  font-size: 24px;
+  line-height: 34px;
 }
 /*у последнего абцатца убираю отступ снизу*/
 .two-columns__paragraph:last-of-type{
@@ -138,7 +142,7 @@
 }
 .two-columns__span-accent{
   font-weight: bold;
-  font-size: 24px;  
+  font-size: 24px;
   line-height: 34px;
 }
 
@@ -152,37 +156,38 @@
 /*Для стилей, влияющих на положение окружающих блоков создал элементы родительского блока*/
 .digits__section-title{
   width: 60%;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .section-title{
   text-align: center;
   font-weight: bold;
-  font-size: 60px;  
+  font-size: 60px;
   line-height: 1.15;
 }
 
 .digits__section-subtitle{
   width: 60%;
-  margin: 20px auto 0;  
+  margin: 20px auto 0;
 }
 
 .section-subtitle{
   text-align: center;
   font-weight: normal;
-  font-size: 24px;  
-  line-height: 34px;  
-}  
+  font-size: 24px;
+  line-height: 34px;
+}
 
 .digits__table{
   width: 1100px;
   margin: 0 auto;
   padding: 0;
 }
-.table{  
+
+.table{
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-between;    
+  justify-content: space-between;
 }
 
 .table__cell{
@@ -195,21 +200,21 @@
   margin: 0;
   padding:0;
   font-weight: bold;
-  font-size: 24px;  
+  font-size: 24px;
   line-height: 1.15;
 }
 
 .table__text{
   margin: 20px 0 0;
   font-weight: normal;
-  font-size: 18px;  
+  font-size: 18px;
   line-height: 1.2;
 }
 
 /*секция Фейнман*/
 
 .feynman{
-  position: relative;  
+  position: relative;
   background-color: #f2f2f2;
   background-image: url(../images/feynman.png);
   background-size: 867px 637px;
@@ -218,7 +223,7 @@
 }
 
 .feynman_size_height{
-  height: 790px;  
+  height: 790px;
 }
 
 .feynman_indents_top{
@@ -230,7 +235,7 @@
   margin: 0 auto;
   text-align: center;
   font-weight: bold;
-  font-size: 120px;  
+  font-size: 120px;
   line-height: 1.15;
 }
 
@@ -238,7 +243,7 @@
   margin: 70px auto 0;
   text-align: center;
   font-weight: normal;
-  font-size: 36px;  
+  font-size: 36px;
   line-height: 51px;
 }
 
@@ -247,7 +252,7 @@
   top: 50%;
   right: 48px;
   font-weight: normal;
-  font-size: 36px;  
+  font-size: 36px;
   line-height: 51px;
   color: #2f80ed;
   text-decoration: none;
@@ -275,7 +280,7 @@
 /*Отступы заголовка для секции kaufman*/
 .kaufman__section-title{
   width: 60%;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 /*Модификатор подзаголовка секции для темной секции*/
 .section-subtitle_theme_dark{
@@ -285,7 +290,7 @@
 /*Отступы подзаголовка для секции kaufman*/
 .kaufman__section-subtitle{
   width: 60%;
-  margin: 20px auto 0;  
+  margin: 20px auto 0;
 }
 
 /*Указываю размеры и отступы таблицы как элемента блока kaufman */
@@ -315,7 +320,7 @@
   background-size: contain;
 }
 
-.footer{  
+.footer{
   display: flex;
   justify-content: center;
   color: #fff;
@@ -345,27 +350,27 @@
 .footer__author{
   margin: 18px 0;
   font-weight: normal;
-  font-size: 18px;  
+  font-size: 18px;
   line-height: 25px;
 }
 
 .footer__column-heading{
   font-weight: bold;
-  font-size: 18px;  
+  font-size: 18px;
   line-height: 30px;
 }
 
 .footer__column-links{
   margin:20px 0 16px;
   padding: 0;
-  list-style-type: none;  
+  list-style-type: none;
 }
 
 .footer__column-link{
   color: #fff;
   text-decoration: none;
   font-weight: normal;
-  font-size: 18px;  
+  font-size: 18px;
   line-height: 30px;
 }
 
