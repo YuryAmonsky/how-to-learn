@@ -16,113 +16,112 @@
   /* выше установили ограничения для секции */
   /*установил позиционирование родителя, чтобы дочерние элементы (logo, main-illustration, ) позиционировать абсолютно*/
   position: relative;
-  /*делаю header flex-контейнером для центрирования основного заголовка (header__title) по вертикали*/
+  z-index: 1;
+  /*Ниже делаю header flex-контейнером для центрирования основного заголовка (header__title) по вертикали*/
   display: flex;
   background-color: #f2f2f2;
 }
 
 .logo{
   width: 183px;
-  /*логотип должен располагаться поверх других блоков*/
-  z-index: 2;
 }
 
 .logo_place_header{
   /*высота logo в header и footer разная, поэтому вынес ее в модификатор*/
   height: 32px;
+  /*Ниже задается расположение logo в header*/
   position: absolute;
   top: 30px;
   left: 64px;
+  /*Ниже задал изображение logo как фоновую картинку для div*/
   background-image: url(../images/logo_place_header.svg);
 }
 
 .logo_place_footer{
   height: 35px;
+  /*Ниже задал изображение logo как фоновую картинку для div*/
   background-image: url(../images/logo_place_footer.svg);
 }
 
 .header__title{
-  width: 730px;
+  max-width: 730px;
   margin-left: 64px;
-  /*центрирую flex-элемент заголовок по вертикали*/
+  /*Ниже центрирую flex-элемент заголовок по вертикали*/
   align-self: center;
-  /*заголовок должен располагаться поверх других блоков*/
-  z-index: 2;
-  /*Настройки шрифта*/
+  /*Ниже настройки шрифта*/
   font-weight: bold;
   font-size: 102px;
   line-height: 96px;
 }
 
 .header__subtitle{
-  width: 388px;
+  max-width: 388px;
+  /*Ниже задается расположение подзаголовка в header*/
   position: absolute;
   bottom: 30px;
   left: 64px;
-  z-index: 2;
-  /*Настройки шрифта*/
+  /*Ниже настройки шрифта*/
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
 }
 
 .header__link{
-  /*задал ссылке цвет текста по брифу*/
+  /*Ниже задал ссылке цвет текста по брифу*/
   color: #2f80ed;
-  /*убрал подчеркивание*/
+  /*Ниже убрал подчеркивание для ссылки*/
   text-decoration: none;
 }
 
 .header__square-pic{
   height: 568px;
   width: 568px;
+  /*Ниже расположение синего квадрата в header*/
   position: absolute;
   top: 64px;
   right: 0;
-  /*фоновые картинки не должны перекрывать текст */
-  z-index: 0;
+  /*Ниже стиль для того, чтобы фоновая картинка не перекрывала текст */
+  z-index: -2;
   background-color: #2f80ed;
 }
 
 .header__main-illustration{
   width: 765px;
   height: 608px;
+  /*Ниже расположение основного изображения в header*/
   position: absolute;
   bottom: 0;
   right: 0;
-  /*основная иллюстрация перекрывается текстом, но сама перекрывает синий квадрат*/
-  z-index: 1;
+  /*НИже стиль для того, чтобы основная иллюстрация не перекрывала тексты, но перекрывала синий квадрат*/
+  z-index: -1;
+  /*Ниже задал изображение иллюстрации как фоновоую картинку для div
+  Закомментировал стили для изображения, так как переделал его через тег img
   background-image: url(../images/header-image.png);
   background-size: 765px 608px;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
 }
 
 /*секция с описанием */
 .description{
-  position: relative;
+  /*Ниже внутренний верхний отступ секции*/
+  padding: 100px 0 0;
+  /*position: relative;*/
+  /*Ниже позиционирую блок two-columns по центру в секции description*/
   display: flex;
   justify-content: center;
-}
-/*По БЭМ блоку не рекомендуется указывать стили, влияющие на положение окружающих блоков,
-поэтому для отступов создал модификатор*/
-.description_indent_top{
-  /*по брифу у секции description нет внешних отступов, есть отступ внутри сверху*/
-  margin:0;
-  padding: 100px 0 0;
 }
 
 .two-columns{
   width: 80%;
-  min-height: 300px;
-  /*позиционируем колонки с помощью flex*/
+  /* Ниже позиционируем колонки внутри блока two-columns с помощью flex*/
   display: flex;
   justify-content: space-between;
 }
 /*левая колонка*/
 .two-columns__brief{
-  width: 175px;
+  max-width: 175px;
   margin: 0;
-  /*Настройки шрифта*/
+  /* Ниже настройки шрифта*/
   color: #2f80ed;
   font-weight: normal;
   font-size: 18px;
@@ -131,7 +130,6 @@
 /*правая колонка*/
 .two-columns__main-text{
   min-width: 784px;
-  min-height: 100%;
   width: 80%;
   margin: 0;
   padding: 0;
@@ -140,13 +138,13 @@
 .two-columns__paragraph{
   margin: 0 0 30px 0;
   padding: 0;
-  /*Настройки шрифта*/
+  /*Ниже настройки шрифта*/
   color: #000000;
   font-weight: normal;
   font-size: 24px;
   line-height: 34px;
 }
-/*у последнего абцатца убираю отступ снизу*/
+/*у последнего абзатца убираю отступ снизу*/
 .two-columns__paragraph:last-of-type{
   margin: 0;
 }
@@ -158,43 +156,44 @@
 
 /*секция digits*/
 
-.digits_indents_top-bottom{
-  margin: 0;
+.digits{
+  /*У секции digits внутренние отступы сверху и снизу*/
   padding: 100px 0;
 }
 
-/*Для стилей, влияющих на положение окружающих блоков создал элементы родительского блока*/
-.digits__section-title{
-  width: 60%;
+/*Общий микс для центрирования */
+.centered-block{
   margin: 0 auto;
 }
 
 .section-title{
+  width: 60%;
   text-align: center;
+  /*Ниже настройки шрифта*/
   font-weight: bold;
   font-size: 60px;
   line-height: 1.15;
 }
 
-.digits__section-subtitle{
-  width: 60%;
+/*Микс для внешних отступов подзаголовка в секции digits*/
+.digits__section-subtitle{  
   margin: 20px auto 0;
 }
 
 .section-subtitle{
+  width: 60%;
   text-align: center;
+  /*Ниже настройки шрифта*/
   font-weight: normal;
   font-size: 24px;
   line-height: 34px;
 }
 
-.digits__table{
-  width: 1100px;
-  margin: 0 auto;
-  padding: 0;
-}
-
 .table{
+  width: 1100px;  
+  padding: 0;
+  list-style-type:none;
+  /*Ниже cделал таблицу флекс-контейнером и задал расположение флекс-элементов в нем*/
   display:flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -209,6 +208,7 @@
 .table__heading{
   margin: 0;
   padding:0;
+  /*Ниже настройки шрифта*/
   font-weight: bold;
   font-size: 24px;
   line-height: 1.15;
@@ -216,6 +216,7 @@
 
 .table__text{
   margin: 20px 0 0;
+  /*Ниже настройки шрифта*/
   font-weight: normal;
   font-size: 18px;
   line-height: 1.2;
@@ -224,26 +225,36 @@
 /*секция Фейнман*/
 
 .feynman{
+  min-height: 890px;
+  padding: 100px 0 0;
+  box-sizing: border-box;
+  /*Ниже задал относительное позиционирование, так как внутри секции некоторые элементы
+   будут позиционироваться абсолютно*/
   position: relative;
+  z-index: 1;
   background-color: #f2f2f2;
+  /*ниже закомментировал стили для изображения, так как переделал картинку с помощью img*/
+  /*Ниже задал изображениесекции как фоновую картинку для div
   background-image: url(../images/feynman.png);
   background-size: 867px 637px;
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: left bottom;*/
 }
 
-.feynman_size_height{
-  height: 790px;
-}
-
-.feynman_indents_top{
-  padding: 100px 0 0;
+.feynman__illustration{
+  width: 867px;
+  height: 637px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .feynman__title{
-  width: 648px;
+  max-width: 648px;
   margin: 0 auto;
   text-align: center;
+  /*Ниже настройки шрифта*/
   font-weight: bold;
   font-size: 120px;
   line-height: 1.15;
@@ -252,6 +263,7 @@
 .feynman__subtitle{
   margin: 70px auto 0;
   text-align: center;
+  /*Ниже настройки шрифта*/
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
@@ -261,9 +273,11 @@
   position: absolute;
   top: 50%;
   right: 48px;
+  /*Ниже настройки шрифта*/
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
+  /*Ниже для ссылки задал цвет и убрал подчеркивание*/
   color: #2f80ed;
   text-decoration: none;
 }
@@ -271,44 +285,27 @@
 /*секция kaufman*/
 
 .kaufman{
+  padding: 90px 0;
   position:relative;
-  z-index: 0;
+  z-index: 1;
   background-color:  #1f1f1f;
-  /*прячем выступающую за блок часть синего треугольника*/
+  /*Ниже прячем выступающую за блок часть синего треугольника*/
   overflow: hidden;
 }
 
-/*Выншу отступы блока в модификатор*/
-.kaufman_indents_top-bottom{
-  margin: 0;
-  padding: 90px 0;
-}
 /*Модификатор заголовка секции для темной секции*/
 .section-title_theme_dark{
   color: #fff;
 }
 
-/*Отступы заголовка для секции kaufman*/
-.kaufman__section-title{
-  width: 60%;
-  margin: 0 auto;
-}
 /*Модификатор подзаголовка секции для темной секции*/
 .section-subtitle_theme_dark{
   color: #fff;
 }
 
 /*Отступы подзаголовка для секции kaufman*/
-.kaufman__section-subtitle{
-  width: 60%;
+.kaufman__section-subtitle{  
   margin: 20px auto 0;
-}
-
-/*Указываю размеры и отступы таблицы как элемента блока kaufman */
-.kaufman__table{
-  width: 1100px;
-  margin: 0 auto;
-  padding: 0;
 }
 
 /*Модификатор ячейки таблицы для темной секции*/
@@ -317,30 +314,28 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
-  z-index: 2;
 }
 
 .kaufman__triangle{
   width: 877px;
   height: 877px;
+   /*Ниже задаем расположение картинки с синим треугольником*/
   position: absolute;
   top: 0;
   right: -210px;
-  z-index: 1;
+  z-index: -1;  
+  /*Ниже задаем картинку с синим треугольником как фоновое изображение у div*/
   background-image: url(../images/kaufman-triangle.svg);
   background-size: contain;
 }
 
 .footer{
+  min-height: 350px;
+  /*Ниже размещаю по цетру флекс-элементы футера*/
   display: flex;
   justify-content: center;
   color: #fff;
   background-color:  #1f1f1f;
-}
-
-/*Модификатор высоты для футера*/
-.footer_size_height{
-  min-height: 350px;
 }
 
 /*Флекс-контейнер для содержимого футера*/
@@ -351,11 +346,19 @@
   justify-content: space-between;
 }
 
+.footer__column{
+  display: flex;
+  flex-direction: column;  
+}
 .footer__column_content_copyright{
   flex-basis: 711px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
+}
+.footer__column_content_info{
+  justify-content:flex-start;
+}
+.footer__column_content_social{
+  justify-content:flex-start;
 }
 
 .footer__author{
@@ -391,15 +394,4 @@
   margin-right: 10px;
   /*Позиционирование иконок соцсетей на одной линии с ссылками*/
   display: inline-block;
-}
-
-.footer__social-icon_name_facebook{
-  background-image: url(../images/facebook_color_white.svg);
-}
-.footer__social-icon_name_vk{
-  background-image: url(../images/vk_color_white.svg);
-}
-
-.footer__social-icon_name_instagram{
-  background-image: url(../images/instagram_color_white.svg);
 }
