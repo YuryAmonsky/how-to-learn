@@ -1,3 +1,8 @@
+/*Общий микс для центрирования */
+.centered-block{
+  margin: 0 auto;
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -39,7 +44,6 @@
 
 .logo_place_footer{
   height: 35px;
-  /*Ниже задал изображение logo как фоновую картинку для div*/
   background-image: url(../images/logo_place_footer.svg);
 }
 
@@ -48,7 +52,7 @@
   margin-left: 64px;
   /*Ниже центрирую flex-элемент заголовок по вертикали*/
   align-self: center;
-  /*Ниже настройки шрифта*/
+  /*Ниже настройки шрифта заголовка*/
   font-weight: bold;
   font-size: 102px;
   line-height: 96px;
@@ -60,7 +64,7 @@
   position: absolute;
   bottom: 30px;
   left: 64px;
-  /*Ниже настройки шрифта*/
+  /*Ниже настройки шрифта подзаголовка*/
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
@@ -72,6 +76,11 @@
   /*Ниже убрал подчеркивание для ссылки*/
   text-decoration: none;
 }
+/*поведение ссылки при наведении мыши*/
+.header__link:hover{
+  font-weight: bolder;
+}
+
 
 .header__square-pic{
   height: 568px;
@@ -94,18 +103,13 @@
   right: 0;
   /*НИже стиль для того, чтобы основная иллюстрация не перекрывала тексты, но перекрывала синий квадрат*/
   z-index: -1;
-  /*Ниже задал изображение иллюстрации как фоновоую картинку для div
-  Закомментировал стили для изображения, так как переделал его через тег img
-  background-image: url(../images/header-image.png);
-  background-size: 765px 608px;
-  background-repeat: no-repeat;*/
+  object-fit: cover;
 }
 
 /*секция с описанием */
 .description{
   /*Ниже внутренний верхний отступ секции*/
   padding: 100px 0 0;
-  /*position: relative;*/
   /*Ниже позиционирую блок two-columns по центру в секции description*/
   display: flex;
   justify-content: center;
@@ -121,7 +125,7 @@
 .two-columns__brief{
   max-width: 175px;
   margin: 0;
-  /* Ниже настройки шрифта*/
+  /* Ниже настройки шрифта заголовка описания*/
   color: #2f80ed;
   font-weight: normal;
   font-size: 18px;
@@ -138,7 +142,7 @@
 .two-columns__paragraph{
   margin: 0 0 30px 0;
   padding: 0;
-  /*Ниже настройки шрифта*/
+  /*Ниже настройки шрифта основного текста описания*/
   color: #000000;
   font-weight: normal;
   font-size: 24px;
@@ -161,15 +165,10 @@
   padding: 100px 0;
 }
 
-/*Общий микс для центрирования */
-.centered-block{
-  margin: 0 auto;
-}
-
 .section-title{
   width: 60%;
   text-align: center;
-  /*Ниже настройки шрифта*/
+  /*Ниже настройки шрифта заголовка секции digits*/
   font-weight: bold;
   font-size: 60px;
   line-height: 1.15;
@@ -183,7 +182,7 @@
 .section-subtitle{
   width: 60%;
   text-align: center;
-  /*Ниже настройки шрифта*/
+  /*Ниже настройки шрифта подзаголовка секции digits*/
   font-weight: normal;
   font-size: 24px;
   line-height: 34px;
@@ -233,12 +232,6 @@
   position: relative;
   z-index: 1;
   background-color: #f2f2f2;
-  /*ниже закомментировал стили для изображения, так как переделал картинку с помощью img*/
-  /*Ниже задал изображениесекции как фоновую картинку для div
-  background-image: url(../images/feynman.png);
-  background-size: 867px 637px;
-  background-repeat: no-repeat;
-  background-position: left bottom;*/
 }
 
 .feynman__illustration{
@@ -247,7 +240,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index: -1;  
 }
 
 .feynman__title{
@@ -280,6 +273,13 @@
   /*Ниже для ссылки задал цвет и убрал подчеркивание*/
   color: #2f80ed;
   text-decoration: none;
+}
+/*поведение ссылки при наведении мыши*/
+.feynman__link:hover{
+  font-weight: bolder;
+  /*сделал смещение вправо, чтобы поведение было похоже на header__link: 
+   при наведении мыши движение в направлении стрелки, которая есть в ссылке */
+  right: 36px;
 }
 
 /*секция kaufman*/
@@ -331,6 +331,8 @@
 
 .footer{
   min-height: 350px;
+  padding: 60px 0 40px;
+  box-sizing: border-box;
   /*Ниже размещаю по цетру флекс-элементы футера*/
   display: flex;
   justify-content: center;
@@ -340,8 +342,7 @@
 
 /*Флекс-контейнер для содержимого футера*/
 .footer__columns{
-  width: 90%;
-  margin: 60px 0 40px;
+  width: 90%;  
   display: flex;
   justify-content: space-between;
 }
@@ -369,6 +370,7 @@
 }
 
 .footer__column-heading{
+  margin: 0;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
@@ -381,17 +383,27 @@
 }
 
 .footer__column-link{
+  min-width: 119px;
+  /*Позиционирование иконок соцсетей на одной линии с ссылками*/
+  display: flex;
+  align-items: center;
   color: #fff;
   text-decoration: none;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
 }
+/*поведение ссылок в футере при наведении мыши
+*/
+.footer__column-link:hover{
+  font-weight: bolder;
+}
+.footer__column-link:hover .footer__social-icon{
+  background-color: #f2f2f2;
+}
 
 .footer__social-icon{
   width: 16px;
   height: 16px;
   margin-right: 10px;
-  /*Позиционирование иконок соцсетей на одной линии с ссылками*/
-  display: inline-block;
 }
