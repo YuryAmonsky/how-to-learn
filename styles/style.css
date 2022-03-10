@@ -342,7 +342,7 @@
 
 /*Флекс-контейнер для содержимого футера*/
 .footer__columns{
-  width: 90%;  
+  width: 90%;
   display: flex;
   justify-content: space-between;
 }
@@ -393,8 +393,7 @@
   font-size: 18px;
   line-height: 30px;
 }
-/*поведение ссылок в футере при наведении мыши
-*/
+/*поведение ссылок в футере при наведении мыши*/
 .footer__column-link:hover{
   font-weight: bolder;
 }
