@@ -1,0 +1,11 @@
+.header__main-illustration{
+  width: 765px;
+  height: 608px;
+  /*Ниже расположение основного изображения в header*/
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /*НИже стиль для того, чтобы основная иллюстрация не перекрывала тексты, но перекрывала синий квадрат*/
+  z-index: -1;
+  object-fit: cover;
+}

@@ -1,0 +1,10 @@
+.section-title{
+  width: 60%;
+  padding: 0;
+  margin:0 auto;
+  text-align: center;
+  /*Ниже настройки шрифта заголовка секции digits*/
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 1.15;
+}

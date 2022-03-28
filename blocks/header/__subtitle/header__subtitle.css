@@ -1,0 +1,11 @@
+.header__subtitle{
+  max-width: 388px;
+  /*Ниже задается расположение подзаголовка в header*/
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  /*Ниже настройки шрифта подзаголовка*/
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+}

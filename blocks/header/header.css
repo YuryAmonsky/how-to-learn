@@ -1,0 +1,13 @@
+.header {
+  /*Установили ограничения для секции */
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  /* Ниже установил позиционирование родителя, чтобы дочерние элементы (logo, main-illustration, ) позиционировать абсолютно*/
+  position: relative;
+  z-index: 1;
+  /*Ниже делаю header flex-контейнером для центрирования основного заголовка (header__title) по вертикали*/
+  display: flex;
+  overflow: hidden;
+  background-color: #f2f2f2;
+}

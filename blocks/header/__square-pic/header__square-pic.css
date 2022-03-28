@@ -1,0 +1,11 @@
+.header__square-pic{
+  height: 568px;
+  width: 568px;
+  /*Ниже расположение синего квадрата в header*/
+  position: absolute;
+  top: 64px;
+  right: 0;
+  /*Ниже стиль для того, чтобы фоновая картинка не перекрывала текст */
+  z-index: -2;
+  background-color: #2f80ed;
+}

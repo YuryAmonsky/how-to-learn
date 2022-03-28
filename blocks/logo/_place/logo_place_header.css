@@ -1,0 +1,10 @@
+.logo_place_header{
+  /*высота logo в header и footer разная, поэтому вынес ее в модификатор*/
+  height: 32px;
+  /*Ниже задается расположение logo в header*/
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  /*Ниже задал изображение logo как фоновую картинку для div*/
+  background-image: url(../../../images/logo/logo_place_header.svg);
+}

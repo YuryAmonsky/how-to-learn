@@ -1,0 +1,12 @@
+.kaufman__triangle{
+  width: 877px;
+  height: 877px;
+   /*Ниже задаем расположение картинки с синим треугольником*/
+  position: absolute;
+  top: 0;
+  right: -210px;
+  z-index: -1;  
+  /*Ниже задаем картинку с синим треугольником как фоновое изображение у div*/
+  background-image: url(../../../images/kaufman-triangle.svg);
+  background-size: cover;
+}

@@ -1,0 +1,8 @@
+/*секция с описанием */
+.description{
+  /*Ниже внутренний верхний отступ секции*/
+  padding: 100px 0 0;
+  /*Ниже позиционирую блок two-columns по центру в секции description*/
+  display: flex;
+  justify-content: center;
+}

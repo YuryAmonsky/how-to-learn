@@ -1,0 +1,12 @@
+/*секция Фейнман*/
+
+.feynman{
+  min-height: 890px;
+  padding: 100px 0 0;
+  box-sizing: border-box;
+  /*Ниже задал относительное позиционирование, так как внутри секции некоторые элементы
+   будут позиционироваться абсолютно*/
+  position: relative;
+  z-index: 1;
+  background-color: #f2f2f2;
+}

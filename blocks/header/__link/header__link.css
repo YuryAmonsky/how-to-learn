@@ -1,0 +1,12 @@
+.header__link{
+  /*Ниже задал ссылке цвет текста по брифу*/
+  color: #2f80ed;
+  /*Ниже убрал подчеркивание для ссылки*/
+  text-decoration: none;
+  opacity: 1;
+}
+/*поведение ссылки при наведении мыши*/
+.header__link:hover{
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
