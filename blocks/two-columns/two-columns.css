@@ -1,6 +1,6 @@
-.two-columns{
+.two-columns {
   width: 80%;
   /* Ниже позиционируем колонки внутри блока two-columns с помощью flex*/
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
 }

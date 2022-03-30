@@ -1,4 +1,4 @@
-.cards__item{
+.cards__item {
   width: 240px;
   display: block;
   padding: 0;
@@ -6,6 +6,6 @@
   box-sizing: border-box;
 }
 
-.cards__item:nth-of-type(3n){
+.cards__item:nth-of-type(3n) {
   margin: 0;
 }

@@ -1,4 +1,4 @@
-.footer__column-link{
+.footer__column-link {
   min-width: 119px;
   /*Позиционирование иконок соцсетей на одной линии с ссылками*/
   display: flex;
@@ -10,7 +10,8 @@
   line-height: 30px;
   transition: opacity 0.3s;
 }
+
 /*поведение ссылок в футере при наведении мыши*/
-.footer__column-link:hover{
-  opacity: 0.5;  
+.footer__column-link:hover {
+  opacity: 0.5;
 }

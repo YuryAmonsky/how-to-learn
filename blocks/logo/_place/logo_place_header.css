@@ -1,4 +1,4 @@
-.logo_place_header{
+.logo_place_header {
   /*высота logo в header и footer разная, поэтому вынес ее в модификатор*/
   height: 32px;
   /*Ниже задается расположение logo в header*/

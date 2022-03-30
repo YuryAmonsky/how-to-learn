@@ -1,10 +1,10 @@
-.table{
+.table {
   width: 1100px;
   padding: 0;
   margin: 0 auto;
-  list-style-type:none;
+  list-style-type: none;
   /*Ниже cделал таблицу флекс-контейнером и задал расположение флекс-элементов в нем*/
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }

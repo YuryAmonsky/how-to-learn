@@ -1,4 +1,4 @@
-.feynman__link{
+.feynman__link {
   position: absolute;
   top: 50%;
   right: 48px;
@@ -11,7 +11,8 @@
   text-decoration: none;
   transition: opacity 0.3s;
 }
+
 /*поведение ссылки при наведении мыши*/
-.feynman__link:hover{
-  opacity: 0.5;  
+.feynman__link:hover {
+  opacity: 0.5;
 }

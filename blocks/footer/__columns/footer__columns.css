@@ -1,5 +1,5 @@
 /*Флекс-контейнер для содержимого футера*/
-.footer__columns{
+.footer__columns {
   width: 90%;
   display: flex;
   justify-content: space-between;
