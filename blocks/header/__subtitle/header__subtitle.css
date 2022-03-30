@@ -1,5 +1,6 @@
 .header__subtitle{
   max-width: 388px;
+  margin: 0;
   /*Ниже задается расположение подзаголовка в header*/
   position: absolute;
   bottom: 30px;

@@ -3,10 +3,9 @@
   color: #2f80ed;
   /*Ниже убрал подчеркивание для ссылки*/
   text-decoration: none;
-  opacity: 1;
+  transition: opacity 0.3s;
 }
 /*поведение ссылки при наведении мыши*/
 .header__link:hover{
-  opacity: 0.5;
-  transition: opacity 0.3s;
+  opacity: 0.5;  
 }

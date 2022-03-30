@@ -2,9 +2,11 @@
   width: 16px;
   height: 16px;
   margin-right: 10px;
-}
-
-.footer__column-link:hover .footer__social-icon{
-  background-color: #f2f2f2;
+  /* Ниже задал плавность подсветки иконки при наведении мыши на ссылку. 
+     Плавность изменения прозрачности ссылки задана отдельно в классе footer__column-limk */
   transition: background-color 1s;
+}
+/*меняю цвет фона для подсветки иконки соцсетей при наведении мыши на ссылку. Прозрачность ссылки задана отдельно*/
+.footer__column-link:hover .footer__social-icon{
+  background-color: #f2f2f2;  
 }

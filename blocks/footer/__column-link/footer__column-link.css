@@ -8,10 +8,9 @@
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
-  opacity: 1;
+  transition: opacity 0.3s;
 }
 /*поведение ссылок в футере при наведении мыши*/
 .footer__column-link:hover{
-  opacity: 0.5;
-  transition: opacity 0.3s;
+  opacity: 0.5;  
 }
